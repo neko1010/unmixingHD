@@ -19,7 +19,7 @@ waterRFmae = round(mae(waterRF$prop, waterRF$classification) , 2)
 waterRFrmse = round(rmse(waterRF$prop, waterRF$classification), 2)
 
 waterRFplot = ggplot(waterRF, aes(prop, classification)) +
-  geom_hex(bins = 10) +
+  geom_hex(bins = 8) +
   guides(fill = guide_colourbar(label = FALSE, ticks = FALSE, title = "Density"))+
   scale_fill_viridis_c(option = 'plasma') +
   scale_y_continuous( limits = c(0,1)) +
@@ -37,7 +37,7 @@ waterSMAmae = round(mae(waterSMA$prop, waterSMA$band_0) , 2)
 waterSMArmse = round(rmse(waterSMA$prop, waterSMA$band_0), 2)
 
 waterSMAplot = ggplot(data = waterSMA, aes(prop, band_0)) +
-  geom_hex(bins = 10) +
+  geom_hex(bins = 8) +
   guides(fill = guide_colourbar(label = FALSE, ticks = FALSE, title = "Density"))+
   scale_fill_viridis_c(option = 'plasma') +
   scale_y_continuous(limits = c(0,1)) +
@@ -54,7 +54,7 @@ mesicRFmae = round(mae(mesicRF$prop, mesicRF$classification) , 2)
 mesicRFrmse = round(rmse(mesicRF$prop, mesicRF$classification), 2)
 
 mesicRFplot = ggplot(data = mesicRF, aes(prop, classification)) +
-  geom_hex(bins = 10) + 
+  geom_hex(bins = 8) + 
   guides(fill = guide_colourbar(label = FALSE, ticks = FALSE, title = "Density"))+
   scale_fill_viridis_c() +
   scale_y_continuous( limits = c(0,1)) +
@@ -71,7 +71,7 @@ mesicSMAmae = round(mae(mesicSMA$prop, mesicSMA$band_1) , 2)
 mesicSMArmse = round(rmse(mesicSMA$prop, mesicSMA$band_1), 2)
 
 mesicSMAplot = ggplot(data = mesicSMA, aes(prop, band_1)) +
-  geom_hex(bins = 10) + 
+  geom_hex(bins = 8) + 
   guides(fill = guide_colourbar(label = FALSE, ticks = FALSE, title = "Density"))+
   scale_fill_viridis_c()+
   scale_y_continuous( limits = c(0,1)) +
